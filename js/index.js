@@ -5,11 +5,25 @@ $.validator.addMethod("letters", function(value, element) {
 });
 $form.validate({
   rules: {
+
+    name: {
+      required: true,
+    },
+
     telephone: {
       required: true,
       minlength: 3,
       letters: false
     },
+
+    state: {
+      required: true,
+    },
+
+    message: {
+      required: true,
+    },
+
   },
 
   submitHandler: function() {
